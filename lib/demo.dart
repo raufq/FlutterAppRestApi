@@ -9,9 +9,11 @@ import 'package:flutterapp/Get_API/home_screen2.dart';
 import 'package:flutterapp/Get_API/home_screen3.dart';
 import 'package:flutterapp/Get_API/home_screen4.dart';
 import 'package:flutterapp/Get_API/home_screen5.dart';
+import 'package:flutterapp/Get_API/image_text_screen.dart';
 import 'package:flutterapp/POST_API/login.dart';
 import 'package:flutterapp/POST_API/sign_up.dart';
 import 'package:flutterapp/POST_API/upload_image.dart';
+import 'package:flutterapp/main.dart';
 
 class CategoryScreen extends StatefulWidget {
   const CategoryScreen({super.key});
@@ -28,6 +30,17 @@ class _CategoryScreenState extends State<CategoryScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MyHomePageScreen()),
+                  );
+                },
+                child: Text("Image with text")),
+            SizedBox(
+              height: 10,
+            ),
             ElevatedButton(
                 onPressed: () {
                   Navigator.push(
